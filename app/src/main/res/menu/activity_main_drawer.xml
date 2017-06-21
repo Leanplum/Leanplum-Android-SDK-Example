@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_push_notifications"
+            android:icon="@drawable/ic_notifications_black_24dp"
+            android:title="Push Notifications" />
+        <item android:id="@+id/nav_in_app_messages" android:icon="@drawable/ic_message_black_24dp"
+            android:title="In-app Messages" />
+        <item android:id="@+id/nav_app_inbox" android:icon="@drawable/ic_inbox_black_24dp"
+            android:title="App Inbox" />
+        <item android:id="@+id/nav_ab_test" android:icon="@drawable/ic_refresh_black_24dp"
+            android:title="A/B Test" />
+    </group>
+</menu>

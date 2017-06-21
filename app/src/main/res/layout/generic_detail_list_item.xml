@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground" android:clickable="true"
+    android:orientation="vertical">
+
+    <TextView android:id="@+id/content" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginBottom="3dp"
+        android:layout_marginLeft="6dp" android:layout_marginStart="6dp"
+        android:layout_marginTop="3dp" android:text="This is a title"
+        android:textColor="@color/colorPrimary" android:textSize="16sp" />
+
+    <TextView android:id="@+id/details" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp" android:text="This is a subtitle"
+        android:textSize="12sp" />
+</LinearLayout>
