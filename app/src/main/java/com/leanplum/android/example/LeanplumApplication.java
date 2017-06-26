@@ -22,6 +22,9 @@ public class LeanplumApplication extends Application {
   public void onCreate() {
     super.onCreate();
 
+    // Warning: Only used for testing purposes, do not use in production.
+    Leanplum.setApiConnectionSettings(Configure.API_HOST_NAME, "api", Configure.API_SSL);
+
     Leanplum.setApplicationContext(this);
     if (BuildConfig.DEBUG) {
       Leanplum.setAppIdForDevelopmentMode(Configure.APP_ID, Configure.DEVELOPMENT_KEY);
