@@ -12,10 +12,34 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
-    buildTypes {
+    signingConfigs {
         release {
-            minifyEnabled false
+            keyAlias 'leanplum'
+            keyPassword 'leanplum'
+            storeFile file('../keys/key.jks')
+            storePassword 'leanplum'
+        }
+    }
+    productFlavors {
+        packaged {
+            return void;
+        }
+        sources {
+            return void;
+        }
+    }
+    buildTypes {
+        buildTypes.each {
+            it.buildConfigField "boolean", "TEST_START_IN_ACTIVITY", "false"
+            it.buildConfigField "boolean", "USE_FIREBASE", "false"
+        }
+        debug {
+            testCoverageEnabled = true
+        }
+        release {
+            minifyEnabled = true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }

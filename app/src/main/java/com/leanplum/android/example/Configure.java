@@ -20,7 +20,7 @@ class Configure {
   static final String DEVELOPMENT_KEY = "dev_Bx8i3Bbz1OJBTBAu63NIifr3UwWqUBU5OhHtywo58RY";
 
   static final String API_HOST_NAME = "10.0.2.2:3000";
-  static final Boolean API_SSL = true;
+  static final Boolean API_SSL = false;
 
   static final String SOCKET_HOST_NAME = "dev.leanplum.com";
   static final Integer SOCKET_PORT = 80;
