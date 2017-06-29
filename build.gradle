@@ -16,7 +16,7 @@ allprojects {
     repositories {
         jcenter()
         maven {
-            url "https://repo.leanplum.com/"
+            url "https://repo-internal.leanplum.com/"
         }
     }
 }

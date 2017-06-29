@@ -44,7 +44,7 @@ android {
     }
 }
 
-def LP_VERSION = System.getenv('VERSION') ?: '2.2.2';
+def LP_VERSION = System.getenv('VERSION') ?: '2.2.3-SNAPSHOT.167';
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
