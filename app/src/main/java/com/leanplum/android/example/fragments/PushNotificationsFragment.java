@@ -48,8 +48,8 @@ public class PushNotificationsFragment extends Fragment {
     loadTest.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        for(int i=0; i < 10002; i++) {
-          Leanplum.track("Load TestF");
+        for (int i = 0; i < 10002; i++) {
+          Leanplum.track("load_test_iteration" + i);
         }
       }
     });

@@ -19,9 +19,9 @@ class Configure {
   static final String PRODUCTION_KEY = "prod_B32xfU8yOurat0vtBN6MUyHKS6emTkNRFeZpfq7l3mg";
   static final String DEVELOPMENT_KEY = "dev_GyoNGztMiVHIdpDvq9ilrL6jcs6n4IcCpp8oJvfbhj0";
 
-  static final String API_HOST_NAME = "leanplum-qa-1372.appspot.com";
+  static final String API_HOST_NAME = "api.leanplum.com";
   static final Boolean API_SSL = false;
 
-  static final String SOCKET_HOST_NAME = "dev-qa.leanplum.com";
+  static final String SOCKET_HOST_NAME = "dev.leanplum.com";
   static final Integer SOCKET_PORT = 80;
 }

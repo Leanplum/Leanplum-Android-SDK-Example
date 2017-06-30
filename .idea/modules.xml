@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDK/AndroidSDK.iml" filepath="$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDK/AndroidSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Leanplum-Android-UIEditor/AndroidSDKUIEditor/AndroidSDKUIEditor.iml" filepath="$PROJECT_DIR$/../Leanplum-Android-UIEditor/AndroidSDKUIEditor/AndroidSDKUIEditor.iml" />
       <module fileurl="file://$PROJECT_DIR$/Leanplum-Android-SDK-Example.iml" filepath="$PROJECT_DIR$/Leanplum-Android-SDK-Example.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

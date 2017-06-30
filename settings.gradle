@@ -1,3 +1,5 @@
 include ':app'
 include ':AndroidSDK'
 project(':AndroidSDK').projectDir = new File('../Leanplum-Android-SDK/AndroidSDK')
+include ':AndroidSDKUIEditor'
+project(':AndroidSDKUIEditor').projectDir = new File('..//Leanplum-Android-UIEditor/AndroidSDKUIEditor')
