@@ -17,7 +17,7 @@ package com.leanplum.android.example;
 class Configure {
   static final String APP_ID = "app_LzkBKz08zXAFxKCrSyeScGHLlFX6XUVQBdT5za03Wks";
   static final String PRODUCTION_KEY = "prod_B32xfU8yOurat0vtBN6MUyHKS6emTkNRFeZpfq7l3mg";
-  static final String DEVELOPMENT_KEY = "dev_Bx8i3Bbz1OJBTBAu63NIifr3UwWqUBU5OhHtywo58RY";
+  static final String DEVELOPMENT_KEY = "dev_GyoNGztMiVHIdpDvq9ilrL6jcs6n4IcCpp8oJvfbhj0";
 
   static final String API_HOST_NAME = "leanplum-qa-1372.appspot.com";
   static final Boolean API_SSL = false;

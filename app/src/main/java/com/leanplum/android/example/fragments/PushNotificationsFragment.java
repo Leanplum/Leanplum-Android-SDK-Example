@@ -40,8 +40,16 @@ public class PushNotificationsFragment extends Fragment {
     example.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
+        Leanplum.track("Example");
+      }
+    });
+
+    Button loadTest = (Button) root.findViewById(R.id.load_test);
+    loadTest.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
         for(int i=0; i < 10002; i++) {
-          Leanplum.track("Example");
+          Leanplum.track("Load TestF");
         }
       }
     });
