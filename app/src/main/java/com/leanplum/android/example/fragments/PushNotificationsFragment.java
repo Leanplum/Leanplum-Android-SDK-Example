@@ -54,6 +54,15 @@ public class PushNotificationsFragment extends Fragment {
       }
     });
 
+    Button crashApp = (Button) root.findViewById(R.id.crash_app);
+    crashApp.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            throw new RuntimeException("This is a crash");
+        }
+
+    });
+
     return root;
   }
 }
