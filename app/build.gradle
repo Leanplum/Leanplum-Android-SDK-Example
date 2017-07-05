@@ -1,5 +1,12 @@
 apply plugin: 'com.android.application'
 
+configurations {
+    packagedDebugCompile
+    packagedReleaseCompile
+    sourcesDebugCompile
+    sourcesReleaseCompile
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -58,7 +65,19 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.3.1'
     testCompile 'junit:junit:4.12'
 
-    compile 'com.leanplum:Leanplum:' + LP_VERSION
-    compile 'com.leanplum:UIEditor:' + LP_VERSION
+    //App build types
+    packagedCompile 'com.leanplum:Leanplum:' + LP_VERSION
+    packagedCompile 'com.leanplum:UIEditor:' + LP_VERSION
+    sourcesDebugCompile project(path: ':AndroidSDK', configuration: 'debug')
+    sourcesReleaseCompile project(path: ':AndroidSDK', configuration: 'release')
+
+    // Leanplum UI Editor SDK
+    //noinspection GradleDynamicVersion
+    packagedDebugCompile 'com.leanplum:UIEditor:2.+'
+    //noinspection GradleDynamicVersion
+    packagedReleaseCompile 'com.leanplum:UIEditor:2.+'
+    sourcesDebugCompile project(path: ':AndroidSDKUIEditor', configuration: 'debug')
+    sourcesReleaseCompile project(path: ':AndroidSDKUIEditor', configuration: 'release')
+
     compile 'com.google.android.gms:play-services-gcm:10.2.6'
 }
