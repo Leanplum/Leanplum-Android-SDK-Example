@@ -4,33 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button android:id="@+id/example_button" android:layout_width="149dp"
+    <Button android:id="@+id/track_event" android:layout_width="149dp"
         android:layout_height="49dp" android:layout_marginBottom="16dp"
-        android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:text="Show example"
+        android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:text="Track Event"
         app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteY="454dp" />
-    <Button
-        android:text="Load Test"
-        android:id="@+id/load_test"
-        android:layout_width="149dp"
-        android:layout_height="49dp"
-        tools:layout_editor_absoluteY="378dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintBottom_toTopOf="@+id/example_button"
-        android:layout_marginBottom="16dp"/>
-    <Button
-        android:text="Crash App"
-        android:id="@+id/crash_app"
-        android:layout_width="149dp"
-        android:layout_height="49dp"
-        tools:layout_editor_absoluteY="378dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintBottom_toTopOf="@+id/load_test"
-        android:layout_marginBottom="16dp"/>
 
 </android.support.constraint.ConstraintLayout>

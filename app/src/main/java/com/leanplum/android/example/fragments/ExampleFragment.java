@@ -53,7 +53,7 @@ public class ExampleFragment extends BaseFragment {
 
     getActivity().setTitle(mFeature.description);
 
-    Button example = (Button) root.findViewById(R.id.example_button);
+    Button example = (Button) root.findViewById(R.id.track_event);
     example.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
