@@ -56,6 +56,4 @@ public class TestingFragment extends Fragment {
 
         return root;
     }
-
-
 }

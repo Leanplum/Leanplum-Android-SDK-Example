@@ -24,6 +24,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.leanplum.Leanplum;
 import com.leanplum.android.example.fragments.AppInboxFragment;
 import com.leanplum.android.example.fragments.InAppMessagesFragment;
 import com.leanplum.android.example.fragments.PushNotificationsFragment;
@@ -91,6 +92,8 @@ public class MainActivity extends AppCompatActivity
     // Insert the fragment by replacing any existing fragment
     FragmentManager fragmentManager = getSupportFragmentManager();
     fragmentManager.beginTransaction().replace(R.id.content_main, fragment).commit();
+
+    Leanplum.advanceTo(fragment.getClass().getSimpleName());
 
     // Highlight the selected item has been done by NavigationView
     item.setChecked(true);
