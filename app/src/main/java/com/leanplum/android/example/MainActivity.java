@@ -32,6 +32,7 @@ import com.leanplum.android.example.fragments.TestingFragment;
 
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
+  private static Boolean firstLaunch = true;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +94,12 @@ public class MainActivity extends AppCompatActivity
     FragmentManager fragmentManager = getSupportFragmentManager();
     fragmentManager.beginTransaction().replace(R.id.content_main, fragment).commit();
 
-    Leanplum.advanceTo(fragment.getClass().getSimpleName());
+    // On app start, this method will be called during activity inflation. Don't track that case.
+    if (firstLaunch) {
+      firstLaunch = false;
+    } else {
+      Leanplum.advanceTo(fragment.getClass().getSimpleName());
+    }
 
     // Highlight the selected item has been done by NavigationView
     item.setChecked(true);
