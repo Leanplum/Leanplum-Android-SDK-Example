@@ -1,5 +1,15 @@
 apply plugin: 'com.android.application'
 
+def LP_VERSION = System.getenv('LP_VERSION') ?: '2.2.2';
+print LP_VERSION
+
+configurations.all {
+    resolutionStrategy {
+        // Force dependency resolution for Leanplum via UI Editor to desired version.
+        force 'com.leanplum:Leanplum:' + LP_VERSION
+    }
+}
+
 configurations {
     packagedDebugCompile
     packagedReleaseCompile
@@ -50,8 +60,6 @@ android {
         }
     }
 }
-
-def LP_VERSION = System.getenv('VERSION') ?: '2.2.2';
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
