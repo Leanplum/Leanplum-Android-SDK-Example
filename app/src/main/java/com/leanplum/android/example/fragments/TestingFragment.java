@@ -2,6 +2,7 @@ package com.leanplum.android.example.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,10 @@ import android.widget.Button;
 import com.leanplum.Leanplum;
 import com.leanplum.android.example.R;
 
+
 public class TestingFragment extends Fragment {
+  private static final String TAG = TestingFragment.class.getSimpleName();
+
   public TestingFragment() {
   }
 
@@ -27,9 +31,19 @@ public class TestingFragment extends Fragment {
     loadTest.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        for (int i = 0; i < 10002; i++) {
-          Leanplum.track("load_test_iteration" + i);
-        }
+        new Thread(new Runnable() {
+          @Override
+          public void run() {
+            try {
+              for (int i = 0; i < 10002; i++) {
+                Leanplum.track("load_test_iteration" + i);
+              }
+
+            } catch (Throwable t) {
+              Log.e(TAG, "Cannot insert 10002 events: " + t.toString());
+            }
+          }
+        }).start();
       }
     });
 
