@@ -6,6 +6,6 @@
     <Button android:id="@+id/load_test" android:layout_width="149dp" android:layout_height="49dp"
         android:layout_marginBottom="16dp" android:text="Load Test" />
     <Button android:id="@+id/crash_app" android:layout_width="149dp" android:layout_height="49dp"
-        android:layout_marginBottom="16dp" android:text="Crash App" />
+        android:layout_marginBottom="16dp" android:text="Crash App" android:enabled="true"/>
 </LinearLayout>
 
