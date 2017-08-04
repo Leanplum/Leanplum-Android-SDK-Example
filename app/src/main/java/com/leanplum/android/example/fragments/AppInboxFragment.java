@@ -24,9 +24,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.leanplum.Leanplum;
-import com.leanplum.NewsfeedMessage;
+import com.leanplum.LeanplumInboxMessage;
 import com.leanplum.android.example.adapters.AppInboxMessagesAdapter;
-import com.leanplum.callbacks.NewsfeedChangedCallback;
+import com.leanplum.callbacks.InboxChangedCallback;
 import com.leanplum.android.example.R;
 
 import java.util.ArrayList;
@@ -60,20 +60,21 @@ public class AppInboxFragment extends BaseFragment {
   @Override
   public void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    Leanplum.newsfeed().addNewsfeedChangedHandler(new NewsfeedChangedCallback() {
+    Leanplum.getInbox().addChangedHandler(new InboxChangedCallback() {
       @Override
-      public void newsfeedChanged() {
+      public void inboxChanged() {
         prepareMessages();
       }
     });
+
     prepareMessages();
   }
 
   private void prepareMessages() {
     mListItems.clear();
 
-    List<NewsfeedMessage> messages = Leanplum.newsfeed().allMessages();
-    for (NewsfeedMessage message : messages) {
+    List<LeanplumInboxMessage> messages = Leanplum.getInbox().allMessages();
+    for (LeanplumInboxMessage message : messages) {
       AppInboxMessageData data = new AppInboxMessageData(message.getTitle(), message.getSubtitle());
       mListItems.add(data);
     }
