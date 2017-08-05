@@ -72,8 +72,8 @@ public class AppInboxFragment extends BaseFragment {
 
   private void prepareMessages() {
     mListItems.clear();
-
-    List<LeanplumInboxMessage> messages = Leanplum.getInbox().allMessages();
+    List messagesList = Leanplum.getInbox().allMessages();
+    List<LeanplumInboxMessage> messages = (List<LeanplumInboxMessage>)messagesList;
     for (LeanplumInboxMessage message : messages) {
       AppInboxMessageData data = new AppInboxMessageData(message.getTitle(), message.getSubtitle());
       mListItems.add(data);
