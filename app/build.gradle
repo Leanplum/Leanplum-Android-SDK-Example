@@ -92,5 +92,5 @@ dependencies {
     sourcesDebugCompile project(':AndroidSDKUIEditor')
     sourcesReleaseCompile project(':AndroidSDKUIEditor')
 
-    compile 'com.google.android.gms:play-services-gcm:11.0.4'
+    compile 'com.google.android.gms:play-services-gcm:11.6.2'
 }
