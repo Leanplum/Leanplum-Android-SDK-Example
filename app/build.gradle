@@ -1,9 +1,9 @@
 apply plugin: 'com.android.application'
 
-def COMPILE_SDK_VERSION = 26
-def BUILD_TOOLS_VERSION = '26.0.1'
-def SUPPORT_LIBRARY_VERSION = '26.0.1'
-def LP_VERSION = System.getenv('LP_VERSION') ?: '2.2.2';
+def COMPILE_SDK_VERSION = 27
+def BUILD_TOOLS_VERSION = '27.0.2'
+def SUPPORT_LIBRARY_VERSION = '27.0.2'
+def LP_VERSION = System.getenv('LP_VERSION') ?: '3.0.2-rc.1';
 
 configurations.all {
     resolutionStrategy {
@@ -20,6 +20,7 @@ configurations {
 }
 
 android {
+    flavorDimensions "default"
     compileSdkVersion COMPILE_SDK_VERSION
     buildToolsVersion "${BUILD_TOOLS_VERSION}"
     defaultConfig {
@@ -63,32 +64,33 @@ android {
     }
 }
 
+
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
-    compile "com.android.support:design:${SUPPORT_LIBRARY_VERSION}"
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile "com.android.support:support-v4:${SUPPORT_LIBRARY_VERSION}"
-    compile "com.android.support:recyclerview-v7:${SUPPORT_LIBRARY_VERSION}"
+    implementation "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
+    implementation "com.android.support:design:${SUPPORT_LIBRARY_VERSION}"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation "com.android.support:support-v4:${SUPPORT_LIBRARY_VERSION}"
+    implementation "com.android.support:recyclerview-v7:${SUPPORT_LIBRARY_VERSION}"
 
     testCompile 'junit:junit:4.12'
 
     //App build types
     packagedCompile 'com.leanplum:Leanplum:' + LP_VERSION
     packagedCompile 'com.leanplum:UIEditor:' + LP_VERSION
-    sourcesDebugCompile project(path: ':AndroidSDK', configuration: 'debug')
-    sourcesReleaseCompile project(path: ':AndroidSDK', configuration: 'release')
+    sourcesDebugCompile project(':AndroidSDK')
+    sourcesReleaseCompile project( ':AndroidSDK')
 
     // Leanplum UI Editor SDK
     //noinspection GradleDynamicVersion
     packagedDebugCompile 'com.leanplum:UIEditor:2.+'
     //noinspection GradleDynamicVersion
     packagedReleaseCompile 'com.leanplum:UIEditor:2.+'
-    sourcesDebugCompile project(path: ':AndroidSDKUIEditor', configuration: 'debug')
-    sourcesReleaseCompile project(path: ':AndroidSDKUIEditor', configuration: 'release')
+    sourcesDebugCompile project(':AndroidSDKUIEditor')
+    sourcesReleaseCompile project(':AndroidSDKUIEditor')
 
-    compile 'com.google.android.gms:play-services-gcm:11.0.4'
+    compile 'com.google.android.gms:play-services-gcm:11.6.2'
 }
