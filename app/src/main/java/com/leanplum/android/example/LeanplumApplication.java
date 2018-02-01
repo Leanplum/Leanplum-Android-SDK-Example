@@ -13,9 +13,12 @@
 package com.leanplum.android.example;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.leanplum.Leanplum;
 import com.leanplum.LeanplumActivityHelper;
+import com.leanplum.LeanplumPushService;
+import com.leanplum.callbacks.StartCallback;
 
 public class LeanplumApplication extends Application {
   @Override
@@ -32,6 +35,11 @@ public class LeanplumApplication extends Application {
       Leanplum.setAppIdForProductionMode(Configure.APP_ID, Configure.PRODUCTION_KEY);
     }
     LeanplumActivityHelper.enableLifecycleCallbacks(this);
-    Leanplum.start(this);
+    Leanplum.start(this, new StartCallback() {
+      @Override
+      public void onResponse(boolean b) {
+        Log.i("Leanplum Test", "Messages at start response: " + Leanplum.messageMetadata());
+      }
+    });
   }
 }

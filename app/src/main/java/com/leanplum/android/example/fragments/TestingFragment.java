@@ -67,7 +67,104 @@ public class TestingFragment extends Fragment {
       }
 
     });
+    final Button push_button = (Button) root.findViewById(R.id.send_push);
+    push_button.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Send_push");
+      }
+    });
 
+    final Button push_button_confirm = (Button) root.findViewById(R.id.send_push_confirm);
+    push_button_confirm.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Send_push_confirm");
+      }
+    });
+
+    final Button push_button_mute_confirm = (Button) root.findViewById(R.id.send_push_mute_confirm);
+    push_button_mute_confirm.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Send_push_mute_confirm");
+      }
+    });
+
+    final Button push_button_mute = (Button) root.findViewById(R.id.send_push_mute);
+    push_button_mute.setOnClickListener(new View.OnClickListener() {
+                                          @Override
+                                          public void onClick(View v) {
+                                            Leanplum.track("Send_push_mute");
+                                          }
+                                        }
+    );
+
+    final Button push_button_alert = (Button) root.findViewById(R.id.send_push_alert);
+    push_button_alert.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Send_push_alert");
+      }
+    });
+
+    final Button push_button_mute_alert = (Button) root.findViewById(R.id.send_push_mute_alert);
+    push_button_mute_alert.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Send_push_mute_alert");
+      }
+    });
+
+
+    final Button push_button_center = (Button) root.findViewById(R.id.send_push_center);
+    push_button_center.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Send_push_center");
+      }
+    });
+
+    final Button push_button_mute_center = (Button) root.findViewById(R.id.send_push_mute_center);
+    push_button_mute_center.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Send_push_mute_center");
+      }
+    });
+
+
+    final Button push_button_interstitial = (Button) root.findViewById(R.id.send_push_interstitial);
+    push_button_interstitial.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Send_push_interstitial");
+      }
+    });
+
+    final Button push_button_mute_interstitial = (Button) root.findViewById(R.id.send_push_mute_interstitial);
+    push_button_mute_interstitial.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Send_push_mute_interstitial");
+      }
+    });
+
+    final Button push_triggered = (Button) root.findViewById(R.id.send_push_triggered);
+    push_triggered.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Send_push_triggered");
+      }
+    });
+
+    final Button push_triggered_cancel = (Button) root.findViewById(R.id.cancel_push_triggered);
+    push_triggered_cancel.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Cancel_push_triggered");
+      }
+    });
     return root;
   }
 }

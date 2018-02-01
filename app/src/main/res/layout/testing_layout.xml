@@ -1,11 +1,133 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical" android:gravity="center">
-    <ImageView android:id="@+id/kitten" android:layout_width="155dp" android:layout_height="136dp"
-        android:layout_marginBottom="45dp" android:src="@drawable/kittens" />
-    <Button android:id="@+id/load_test" android:layout_width="149dp" android:layout_height="49dp"
-        android:layout_marginBottom="16dp" android:text="Load Test" />
-    <Button android:id="@+id/crash_app" android:layout_width="149dp" android:layout_height="49dp"
-        android:layout_marginBottom="16dp" android:text="Crash App" android:enabled="true"/>
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <Button
+        android:id="@+id/load_test"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="1dp"
+        android:text="Load Test"
+        android:textSize="8dp"/>
+
+    <Button
+        android:id="@+id/crash_app"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="1dp"
+        android:enabled="true"
+        android:text="Crash App"
+        android:textSize="8dp"/>
+
+    <Button
+        android:id="@+id/send_push"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="1dp"
+        android:enabled="true"
+        android:text="PUSH"
+        android:textSize="8dp"/>
+
+    <Button
+        android:id="@+id/send_push_mute"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="1dp"
+        android:enabled="true"
+        android:text="PUSH Mute"
+        android:textSize="8dp"/>
+
+    <Button
+        android:id="@+id/send_push_confirm"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="1dp"
+        android:enabled="true"
+        android:text="PUSH_CONFIRM"
+        android:textSize="8dp"/>
+
+    <Button
+        android:id="@+id/send_push_mute_confirm"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="1dp"
+        android:enabled="true"
+        android:text="PUSH_Mute_CONFIRM"
+        android:textSize="8dp"/>
+
+    <Button
+        android:id="@+id/send_push_alert"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="1dp"
+        android:enabled="true"
+        android:text="PUSH_ALERT"
+        android:textSize="8dp"/>
+
+    <Button
+        android:id="@+id/send_push_mute_alert"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="1dp"
+        android:enabled="true"
+        android:text="PUSH_Mute_ALERT"
+        android:textSize="8dp"/>
+
+    <Button
+        android:id="@+id/send_push_center"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="1dp"
+        android:enabled="true"
+        android:text="PUSH_CENTER"
+        android:textSize="8dp"/>
+
+    <Button
+        android:id="@+id/send_push_mute_center"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="1dp"
+        android:enabled="true"
+        android:text="PUSH_Mute_CENTER"
+        android:textSize="8dp"/>
+
+    <Button
+        android:id="@+id/send_push_interstitial"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="1dp"
+        android:enabled="true"
+        android:text="PUSH_INTERSTITIAL"
+        android:textSize="8dp"/>
+
+    <Button
+        android:id="@+id/send_push_mute_interstitial"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="1dp"
+        android:enabled="true"
+        android:text="PUSH_Mute_INTERSTITIAL"
+        android:textSize="8dp"/>
+
+    <Button
+        android:id="@+id/send_push_triggered"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="1dp"
+        android:enabled="true"
+        android:text="SEND_PUSH_TRIGGERED"
+        android:textSize="8dp"/>
+
+    <Button
+        android:id="@+id/cancel_push_triggered"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="1dp"
+        android:enabled="true"
+        android:text="CANCEL_PUSH_TRIGGERED"
+        android:textSize="8dp"/>
+
 </LinearLayout>
 
