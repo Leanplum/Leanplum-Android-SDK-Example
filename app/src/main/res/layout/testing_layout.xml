@@ -129,5 +129,14 @@
         android:text="CANCEL_PUSH_TRIGGERED"
         android:textSize="8dp"/>
 
+    <Button
+        android:id="@+id/alert_limit_lifetime_2"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="1dp"
+        android:enabled="true"
+        android:text="ALERT_LIMIT_LIFETIME_2"
+        android:textSize="8dp"/>
+
 </LinearLayout>
 
