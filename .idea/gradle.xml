@@ -10,8 +10,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDK" />
-            <option value="$PROJECT_DIR$/../Leanplum-Android-UIEditor/AndroidSDKUIEditor" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

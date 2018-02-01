@@ -1,5 +1,29 @@
 include ':app'
-include ':AndroidSDK'
-project(':AndroidSDK').projectDir = new File('../Leanplum-Android-SDK/AndroidSDK')
-include ':AndroidSDKUIEditor'
-project(':AndroidSDKUIEditor').projectDir = new File('..//Leanplum-Android-UIEditor/AndroidSDKUIEditor')
+
+// Uncomment the following lines if you'd like to compile the source code.
+//include ':AndroidSDK'
+//project(':AndroidSDK').projectDir = new File('../Leanplum-Android-SDK/AndroidSDK')
+//
+//include ':AndroidSDKTests'
+//project(':AndroidSDKTests').projectDir = new File('../Leanplum-Android-SDK/AndroidSDKTests')
+//
+//include ':AndroidSDKCore'
+//project(':AndroidSDKCore').projectDir = new File('../Leanplum-Android-SDK/AndroidSDKCore')
+//
+//include ':AndroidSDKPush'
+//project(':AndroidSDKPush').projectDir = new File('../Leanplum-Android-SDK/AndroidSDKPush')
+//
+//include ':AndroidSDKGcm'
+//project(':AndroidSDKGcm').projectDir = new File('../Leanplum-Android-SDK/AndroidSDKGcm')
+//
+//include ':AndroidSDKFcm'
+//project(':AndroidSDKFcm').projectDir = new File('../Leanplum-Android-SDK/AndroidSDKFcm')
+//
+//include ':AndroidSDKLocation'
+//project(':AndroidSDKLocation').projectDir = new File('../Leanplum-Android-SDK/AndroidSDKLocation')
+//
+//include ':AndroidSDKUIEditor'
+//project(':AndroidSDKUIEditor').projectDir = new File('../Leanplum-Android-UIEditor/AndroidSDKUIEditor')
+//
+//include ':AndroidSDKUIEditorTests'
+//project(':AndroidSDKUIEditorTests').projectDir = new File('../Leanplum-Android-UIEditor/AndroidSDKUIEditorTests')
