@@ -165,6 +165,13 @@ public class TestingFragment extends Fragment {
         Leanplum.track("Cancel_push_triggered");
       }
     });
+    final Button alert_limit_lifetime_2 = (Button) root.findViewById(R.id.alert_limit_lifetime_2);
+    alert_limit_lifetime_2 .setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Alert_limit_lifetime_2");
+      }
+    });
     return root;
   }
 }
