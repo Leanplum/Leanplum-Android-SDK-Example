@@ -3,7 +3,15 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDK/AndroidSDK.iml" filepath="$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDK/AndroidSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDKCore/AndroidSDKCore.iml" filepath="$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDKCore/AndroidSDKCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDKFcm/AndroidSDKFcm.iml" filepath="$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDKFcm/AndroidSDKFcm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDKGcm/AndroidSDKGcm.iml" filepath="$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDKGcm/AndroidSDKGcm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDKLocation/AndroidSDKLocation.iml" filepath="$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDKLocation/AndroidSDKLocation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDKPush/AndroidSDKPush.iml" filepath="$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDKPush/AndroidSDKPush.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDKTests/AndroidSDKTests.iml" filepath="$PROJECT_DIR$/../Leanplum-Android-SDK/AndroidSDKTests/AndroidSDKTests.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Leanplum-Android-UIEditor/AndroidSDKUIEditor/AndroidSDKUIEditor.iml" filepath="$PROJECT_DIR$/../Leanplum-Android-UIEditor/AndroidSDKUIEditor/AndroidSDKUIEditor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Leanplum-Android-UIEditor/AndroidSDKUIEditorTests/AndroidSDKUIEditorTests.iml" filepath="$PROJECT_DIR$/../Leanplum-Android-UIEditor/AndroidSDKUIEditorTests/AndroidSDKUIEditorTests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Leanplum-Android-SDK/Leanplum-Android-SDK.iml" filepath="$PROJECT_DIR$/../Leanplum-Android-SDK/Leanplum-Android-SDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/Leanplum-Android-SDK-Example.iml" filepath="$PROJECT_DIR$/Leanplum-Android-SDK-Example.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

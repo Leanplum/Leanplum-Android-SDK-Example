@@ -3,12 +3,12 @@ apply plugin: 'com.android.application'
 def COMPILE_SDK_VERSION = 27
 def BUILD_TOOLS_VERSION = '27.0.2'
 def SUPPORT_LIBRARY_VERSION = '27.0.2'
-def LP_VERSION = System.getenv('LP_VERSION') ?: '3.0.2-rc.1';
+def LP_VERSION = System.getenv('LP_VERSION') ?: '4.0.0.129';
 
 configurations.all {
     resolutionStrategy {
         // Force dependency resolution for Leanplum via UI Editor to desired version.
-        force 'com.leanplum:Leanplum:' + LP_VERSION
+        force 'com.leanplum:leanplum:' + LP_VERSION
     }
 }
 
@@ -78,19 +78,26 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
 
-    //App build types
-    packagedCompile 'com.leanplum:Leanplum:' + LP_VERSION
-    packagedCompile 'com.leanplum:UIEditor:' + LP_VERSION
-    sourcesDebugCompile project(':AndroidSDK')
-    sourcesReleaseCompile project( ':AndroidSDK')
+//    App build types
+    packagedReleaseCompile 'com.leanplum:leanplum-fcm:' + LP_VERSION
+    packagedDebugCompile 'com.leanplum:leanplum:' + LP_VERSION
+
+    sourcesDebugCompile project(':AndroidSDKGcm')
+    sourcesReleaseCompile project( ':AndroidSDKGcm')
+    sourcesDebugCompile project(':AndroidSDKGcm')
+    sourcesReleaseCompile project( ':AndroidSDKGcm')
 
     // Leanplum UI Editor SDK
     //noinspection GradleDynamicVersion
-    packagedDebugCompile 'com.leanplum:UIEditor:2.+'
+    packagedReleaseCompile 'com.leanplum:UIEditor:' + LP_VERSION
+    packagedDebugCompile 'com.leanplum:UIEditor:' + LP_VERSION
     //noinspection GradleDynamicVersion
-    packagedReleaseCompile 'com.leanplum:UIEditor:2.+'
     sourcesDebugCompile project(':AndroidSDKUIEditor')
     sourcesReleaseCompile project(':AndroidSDKUIEditor')
 
-    compile 'com.google.android.gms:play-services-gcm:11.6.2'
+     implementation 'com.google.android.gms:play-services-gcm:11.8.0'
+    // Uncomment for FCM
+   // implementation "com.google.firebase:firebase-messaging:11.8.0"
 }
+// Uncomment for FCM
+//apply plugin: 'com.google.gms.google-services'
