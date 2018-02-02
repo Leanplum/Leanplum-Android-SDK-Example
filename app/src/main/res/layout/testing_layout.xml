@@ -8,7 +8,6 @@
         android:id="@+id/load_test"
         android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginTop="1dp"
         android:text="Load Test"
         android:textSize="8dp"/>
 
@@ -16,7 +15,6 @@
         android:id="@+id/crash_app"
         android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginTop="1dp"
         android:enabled="true"
         android:text="Crash App"
         android:textSize="8dp"/>
@@ -25,7 +23,6 @@
         android:id="@+id/send_push"
         android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginTop="1dp"
         android:enabled="true"
         android:text="PUSH"
         android:textSize="8dp"/>
@@ -34,7 +31,6 @@
         android:id="@+id/send_push_mute"
         android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginTop="1dp"
         android:enabled="true"
         android:text="PUSH Mute"
         android:textSize="8dp"/>
@@ -43,7 +39,6 @@
         android:id="@+id/send_push_confirm"
         android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginTop="1dp"
         android:enabled="true"
         android:text="PUSH_CONFIRM"
         android:textSize="8dp"/>
@@ -52,7 +47,6 @@
         android:id="@+id/send_push_mute_confirm"
         android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginTop="1dp"
         android:enabled="true"
         android:text="PUSH_Mute_CONFIRM"
         android:textSize="8dp"/>
@@ -61,7 +55,6 @@
         android:id="@+id/send_push_alert"
         android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginTop="1dp"
         android:enabled="true"
         android:text="PUSH_ALERT"
         android:textSize="8dp"/>
@@ -70,7 +63,6 @@
         android:id="@+id/send_push_mute_alert"
         android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginTop="1dp"
         android:enabled="true"
         android:text="PUSH_Mute_ALERT"
         android:textSize="8dp"/>
@@ -79,7 +71,6 @@
         android:id="@+id/send_push_center"
         android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginTop="1dp"
         android:enabled="true"
         android:text="PUSH_CENTER"
         android:textSize="8dp"/>
@@ -88,7 +79,6 @@
         android:id="@+id/send_push_mute_center"
         android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginTop="1dp"
         android:enabled="true"
         android:text="PUSH_Mute_CENTER"
         android:textSize="8dp"/>
@@ -97,7 +87,6 @@
         android:id="@+id/send_push_interstitial"
         android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginTop="1dp"
         android:enabled="true"
         android:text="PUSH_INTERSTITIAL"
         android:textSize="8dp"/>
@@ -106,7 +95,6 @@
         android:id="@+id/send_push_mute_interstitial"
         android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginTop="1dp"
         android:enabled="true"
         android:text="PUSH_Mute_INTERSTITIAL"
         android:textSize="8dp"/>
@@ -115,7 +103,6 @@
         android:id="@+id/send_push_triggered"
         android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginTop="1dp"
         android:enabled="true"
         android:text="SEND_PUSH_TRIGGERED"
         android:textSize="8dp"/>
@@ -124,19 +111,32 @@
         android:id="@+id/cancel_push_triggered"
         android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginTop="1dp"
         android:enabled="true"
         android:text="CANCEL_PUSH_TRIGGERED"
         android:textSize="8dp"/>
 
     <Button
-        android:id="@+id/alert_limit_lifetime_2"
+        android:id="@+id/alert_limitSession_2"
         android:layout_width="149dp"
         android:layout_height="29dp"
-        android:layout_marginTop="1dp"
         android:enabled="true"
-        android:text="ALERT_LIMIT_LIFETIME_2"
+        android:text="ALERT_LIMITSESSION_2"
         android:textSize="8dp"/>
+    <Button
+        android:id="@+id/interstitial_limitSession_2"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:enabled="true"
+        android:text="INTERSTITIAL_LIMITSESSION_2"
+        android:textSize="8dp"/>
+    <Button
+        android:id="@+id/center_limitSession_2"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:enabled="true"
+        android:text="Center_LIMITSESSION_2"
+        android:textSize="8dp"/>
+
 
 </LinearLayout>
 
