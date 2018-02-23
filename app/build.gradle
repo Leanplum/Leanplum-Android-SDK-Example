@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 def COMPILE_SDK_VERSION = 27
 def BUILD_TOOLS_VERSION = '27.0.2'
 def SUPPORT_LIBRARY_VERSION = '27.0.2'
-def LP_VERSION = System.getenv('LP_VERSION') ?: '3.0.2-rc.1';
+def LP_VERSION = System.getenv('LP_VERSION') ?: '4.0.0'
 
 configurations.all {
     resolutionStrategy {
@@ -42,10 +42,10 @@ android {
     }
     productFlavors {
         packaged {
-            return void;
+            return void
         }
         sources {
-            return void;
+            return void
         }
     }
     buildTypes {
@@ -64,7 +64,6 @@ android {
     }
 }
 
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -78,19 +77,22 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
 
-    //App build types
-    packagedCompile 'com.leanplum:Leanplum:' + LP_VERSION
-    packagedCompile 'com.leanplum:UIEditor:' + LP_VERSION
-    sourcesDebugCompile project(':AndroidSDK')
-    sourcesReleaseCompile project( ':AndroidSDK')
+    // App build types
+    packagedCompile 'com.leanplum:leanplum-gcm:' + LP_VERSION
+    packagedCompile 'com.leanplum:leanplum-location:' + LP_VERSION
+    packagedCompile 'com.leanplum:leanplum-uieditor:' + LP_VERSION
+    // Uncomment the following lines if you'd like to compile the source code.
+    // sourcesDebugCompile project(':AndroidSDK')
+    // sourcesReleaseCompile project(':AndroidSDK')
 
     // Leanplum UI Editor SDK
     //noinspection GradleDynamicVersion
-    packagedDebugCompile 'com.leanplum:UIEditor:2.+'
+    packagedDebugCompile 'com.leanplum:leanplum-uieditor:' + LP_VERSION
     //noinspection GradleDynamicVersion
-    packagedReleaseCompile 'com.leanplum:UIEditor:2.+'
-    sourcesDebugCompile project(':AndroidSDKUIEditor')
-    sourcesReleaseCompile project(':AndroidSDKUIEditor')
+    packagedReleaseCompile 'com.leanplum:leanplum-uieditor:' + LP_VERSION
+    // Uncomment the following lines if you'd like to compile the source code.
+    // sourcesDebugCompile project(':AndroidSDKUIEditor')
+    // sourcesReleaseCompile project(':AndroidSDKUIEditor')
 
-    compile 'com.google.android.gms:play-services-gcm:11.6.2'
+    compile 'com.google.android.gms:play-services-gcm:11.8.0'
 }
