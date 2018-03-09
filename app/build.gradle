@@ -8,7 +8,10 @@ def LP_VERSION = System.getenv('LP_VERSION') ?: '4.0.0'
 configurations.all {
     resolutionStrategy {
         // Force dependency resolution for Leanplum via UI Editor to desired version.
-        force 'com.leanplum:Leanplum:' + LP_VERSION
+        force 'com.leanplum:leanplum-core:' + LP_VERSION
+        force 'com.leanplum:leanplum-push:' + LP_VERSION
+        force 'com.leanplum:leanplum-gcm:' + LP_VERSION
+        force 'com.leanplum:leanplum-location:' + LP_VERSION
     }
 }
 
