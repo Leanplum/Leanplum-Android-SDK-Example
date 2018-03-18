@@ -35,6 +35,7 @@ public class LeanplumApplication extends Application {
       Leanplum.setAppIdForProductionMode(Configure.APP_ID, Configure.PRODUCTION_KEY);
     }
     LeanplumActivityHelper.enableLifecycleCallbacks(this);
+    LeanplumPushService.setGcmSenderId("395650007716");
     Leanplum.start(this, new StartCallback() {
       @Override
       public void onResponse(boolean b) {

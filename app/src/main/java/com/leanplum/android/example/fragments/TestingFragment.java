@@ -29,7 +29,7 @@ public class TestingFragment extends Fragment {
       Bundle savedInstanceState) {
     View root = inflater.inflate(R.layout.testing_layout, container, false);
 
-    final Button loadTestButton = (Button) root.findViewById(R.id.load_test);
+    final Button loadTestButton = root.findViewById(R.id.load_test);
     loadTestButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -59,7 +59,7 @@ public class TestingFragment extends Fragment {
       }
     });
 
-    Button crashApp = (Button) root.findViewById(R.id.crash_app);
+    Button crashApp = root.findViewById(R.id.crash_app);
     crashApp.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -67,7 +67,7 @@ public class TestingFragment extends Fragment {
       }
 
     });
-    final Button push_button = (Button) root.findViewById(R.id.send_push);
+    final Button push_button = root.findViewById(R.id.send_push);
     push_button.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -75,7 +75,7 @@ public class TestingFragment extends Fragment {
       }
     });
 
-    final Button push_button_confirm = (Button) root.findViewById(R.id.send_push_confirm);
+    final Button push_button_confirm = root.findViewById(R.id.send_push_confirm);
     push_button_confirm.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -83,7 +83,7 @@ public class TestingFragment extends Fragment {
       }
     });
 
-    final Button push_button_mute_confirm = (Button) root.findViewById(R.id.send_push_mute_confirm);
+    final Button push_button_mute_confirm = root.findViewById(R.id.send_push_mute_confirm);
     push_button_mute_confirm.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -91,7 +91,7 @@ public class TestingFragment extends Fragment {
       }
     });
 
-    final Button push_button_mute = (Button) root.findViewById(R.id.send_push_mute);
+    final Button push_button_mute = root.findViewById(R.id.send_push_mute);
     push_button_mute.setOnClickListener(new View.OnClickListener() {
                                           @Override
                                           public void onClick(View v) {
@@ -100,7 +100,7 @@ public class TestingFragment extends Fragment {
                                         }
     );
 
-    final Button push_button_alert = (Button) root.findViewById(R.id.send_push_alert);
+    final Button push_button_alert = root.findViewById(R.id.send_push_alert);
     push_button_alert.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -108,7 +108,7 @@ public class TestingFragment extends Fragment {
       }
     });
 
-    final Button push_button_mute_alert = (Button) root.findViewById(R.id.send_push_mute_alert);
+    final Button push_button_mute_alert = root.findViewById(R.id.send_push_mute_alert);
     push_button_mute_alert.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -117,7 +117,7 @@ public class TestingFragment extends Fragment {
     });
 
 
-    final Button push_button_center = (Button) root.findViewById(R.id.send_push_center);
+    final Button push_button_center = root.findViewById(R.id.send_push_center);
     push_button_center.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -125,7 +125,7 @@ public class TestingFragment extends Fragment {
       }
     });
 
-    final Button push_button_mute_center = (Button) root.findViewById(R.id.send_push_mute_center);
+    final Button push_button_mute_center = root.findViewById(R.id.send_push_mute_center);
     push_button_mute_center.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -134,7 +134,7 @@ public class TestingFragment extends Fragment {
     });
 
 
-    final Button push_button_interstitial = (Button) root.findViewById(R.id.send_push_interstitial);
+    final Button push_button_interstitial = root.findViewById(R.id.send_push_interstitial);
     push_button_interstitial.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -142,7 +142,7 @@ public class TestingFragment extends Fragment {
       }
     });
 
-    final Button push_button_mute_interstitial = (Button) root.findViewById(R.id.send_push_mute_interstitial);
+    final Button push_button_mute_interstitial = root.findViewById(R.id.send_push_mute_interstitial);
     push_button_mute_interstitial.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -150,7 +150,7 @@ public class TestingFragment extends Fragment {
       }
     });
 
-    final Button push_triggered = (Button) root.findViewById(R.id.send_push_triggered);
+    final Button push_triggered = root.findViewById(R.id.send_push_triggered);
     push_triggered.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -158,21 +158,21 @@ public class TestingFragment extends Fragment {
       }
     });
 
-    final Button push_triggered_cancel = (Button) root.findViewById(R.id.cancel_push_triggered);
+    final Button push_triggered_cancel = root.findViewById(R.id.cancel_push_triggered);
     push_triggered_cancel.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
         Leanplum.track("Cancel_push_triggered");
       }
     });
-    final Button alert_limitSession_2 = (Button) root.findViewById(R.id.alert_limitSession_2);
+    final Button alert_limitSession_2 = root.findViewById(R.id.alert_limitSession_2);
     alert_limitSession_2 .setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
         Leanplum.track("Alert_limitSession_2");
       }
     });
-    final Button interstitial_limitSession_2 = (Button) root.findViewById(R.id.interstitial_limitSession_2);
+    final Button interstitial_limitSession_2 = root.findViewById(R.id.interstitial_limitSession_2);
     interstitial_limitSession_2 .setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -180,7 +180,7 @@ public class TestingFragment extends Fragment {
       }
     });
 
-    final Button center_limitSession_2= (Button) root.findViewById(R.id.center_limitSession_2);
+    final Button center_limitSession_2= root.findViewById(R.id.center_limitSession_2);
     center_limitSession_2 .setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
