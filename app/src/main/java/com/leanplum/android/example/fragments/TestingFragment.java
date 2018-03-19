@@ -166,22 +166,22 @@ public class TestingFragment extends Fragment {
       }
     });
     final Button alert_limitSession_2 = root.findViewById(R.id.alert_limitSession_2);
-    alert_limitSession_2 .setOnClickListener(new View.OnClickListener() {
+    alert_limitSession_2.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
         Leanplum.track("Alert_limitSession_2");
       }
     });
     final Button interstitial_limitSession_2 = root.findViewById(R.id.interstitial_limitSession_2);
-    interstitial_limitSession_2 .setOnClickListener(new View.OnClickListener() {
+    interstitial_limitSession_2.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
         Leanplum.track("Interstitial_limitSession_2");
       }
     });
 
-    final Button center_limitSession_2= root.findViewById(R.id.center_limitSession_2);
-    center_limitSession_2 .setOnClickListener(new View.OnClickListener() {
+    final Button center_limitSession_2 = root.findViewById(R.id.center_limitSession_2);
+    center_limitSession_2.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
         Leanplum.track("Center_limitSession_2");
