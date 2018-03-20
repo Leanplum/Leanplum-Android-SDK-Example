@@ -38,6 +38,8 @@ public class LeanplumApplication extends Application {
       Leanplum.setAppIdForProductionMode(Configure.APP_ID, Configure.PRODUCTION_KEY);
     }
     LeanplumActivityHelper.enableLifecycleCallbacks(this);
+
+    // Read GCM Sender Id from BuildConfig, configurable in build.gradle.
     String gcmSenderId = (String) getBuildConfigValue(this, "GCM_SENDER_ID");
     if (gcmSenderId != null) {
       LeanplumPushService.setGcmSenderId(gcmSenderId);
