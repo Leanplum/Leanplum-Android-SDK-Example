@@ -13,9 +13,15 @@
 package com.leanplum.android.example;
 
 import android.app.Application;
+import android.content.Context;
+import android.util.Log;
 
 import com.leanplum.Leanplum;
 import com.leanplum.LeanplumActivityHelper;
+import com.leanplum.LeanplumPushService;
+import com.leanplum.callbacks.StartCallback;
+
+import java.lang.reflect.Field;
 
 public class LeanplumApplication extends Application {
   @Override
@@ -32,6 +38,40 @@ public class LeanplumApplication extends Application {
       Leanplum.setAppIdForProductionMode(Configure.APP_ID, Configure.PRODUCTION_KEY);
     }
     LeanplumActivityHelper.enableLifecycleCallbacks(this);
-    Leanplum.start(this);
+
+    // Read GCM Sender Id from BuildConfig, configurable in build.gradle.
+    String gcmSenderId = (String) getBuildConfigValue(this, "GCM_SENDER_ID");
+    if (gcmSenderId != null) {
+      LeanplumPushService.setGcmSenderId(gcmSenderId);
+    }
+    Leanplum.start(this, new StartCallback() {
+      @Override
+      public void onResponse(boolean b) {
+        Log.i("Leanplum Test", "Messages at start response: " + Leanplum.messageMetadata());
+      }
+    });
+  }
+
+  /**
+   * Gets a field from the project's BuildConfig. This is useful when, for example, flavors
+   * are used at the project level to set custom fields.
+   *
+   * @param context Used to find the correct file
+   * @param fieldName The name of the field-to-access
+   * @return The value of the field, or {@code null} if the field is not found.
+   */
+  public static Object getBuildConfigValue(Context context, String fieldName) {
+    try {
+      Class<?> clazz = Class.forName(context.getPackageName() + ".BuildConfig");
+      Field field = clazz.getField(fieldName);
+      return field.get(null);
+    } catch (ClassNotFoundException e) {
+      e.printStackTrace();
+    } catch (NoSuchFieldException e) {
+      e.printStackTrace();
+    } catch (IllegalAccessException e) {
+      e.printStackTrace();
+    }
+    return null;
   }
 }

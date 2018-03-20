@@ -2,8 +2,9 @@ apply plugin: 'com.android.application'
 
 def COMPILE_SDK_VERSION = 27
 def BUILD_TOOLS_VERSION = '27.0.2'
-def SUPPORT_LIBRARY_VERSION = '27.0.2'
+def SUPPORT_LIBRARY_VERSION = '27.1.0'
 def LP_VERSION = System.getenv('LP_VERSION') ?: '4.0.0'
+def GCM_SENDER_ID = System.getenv('GCM_SENDER_ID') ?: ''
 
 configurations.all {
     resolutionStrategy {
@@ -55,6 +56,8 @@ android {
         buildTypes.each {
             it.buildConfigField "boolean", "TEST_START_IN_ACTIVITY", "false"
             it.buildConfigField "boolean", "USE_FIREBASE", "false"
+            // Configure your own GCM Sender Id here if you need, or provide env var during build.
+            it.buildConfigField "String", "GCM_SENDER_ID", "\"" + GCM_SENDER_ID + "\""
         }
         debug {
             testCoverageEnabled = true

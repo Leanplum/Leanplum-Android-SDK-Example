@@ -28,6 +28,7 @@ import com.leanplum.android.example.adapters.InAppMessagesAdapter;
 import java.util.ArrayList;
 
 public class InAppMessagesFragment extends BaseFragment {
+  private final ArrayList<InAppMessageData> mListItems = new ArrayList<>();
   private OnListItemInteraction<InAppMessageData> mListener = new
       OnListItemInteraction<InAppMessageData>() {
 
@@ -40,7 +41,6 @@ public class InAppMessagesFragment extends BaseFragment {
           ft.addToBackStack(null);
         }
       };
-  private final ArrayList<InAppMessageData> mListItems = new ArrayList<>();
 
   public InAppMessagesFragment() {
   }

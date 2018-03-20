@@ -25,9 +25,9 @@ import android.view.ViewGroup;
 
 import com.leanplum.Leanplum;
 import com.leanplum.LeanplumInboxMessage;
+import com.leanplum.android.example.R;
 import com.leanplum.android.example.adapters.AppInboxMessagesAdapter;
 import com.leanplum.callbacks.InboxChangedCallback;
-import com.leanplum.android.example.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,7 +73,7 @@ public class AppInboxFragment extends BaseFragment {
   private void prepareMessages() {
     mListItems.clear();
     List messagesList = Leanplum.getInbox().allMessages();
-    List<LeanplumInboxMessage> messages = (List<LeanplumInboxMessage>)messagesList;
+    List<LeanplumInboxMessage> messages = (List<LeanplumInboxMessage>) messagesList;
     for (LeanplumInboxMessage message : messages) {
       AppInboxMessageData data = new AppInboxMessageData(message.getTitle(), message.getSubtitle());
       mListItems.add(data);

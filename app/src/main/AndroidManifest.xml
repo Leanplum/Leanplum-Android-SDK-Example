@@ -13,7 +13,8 @@
 
     <application android:name=".LeanplumApplication" android:allowBackup="true"
         android:fullBackupContent="@xml/backup_descriptor" android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/AppTheme">
+        android:label="@string/app_name" android:supportsRtl="true" android:testOnly="false"
+        android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -30,44 +31,5 @@
 
         <meta-data android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
-        <!-- For GCM push notifications only. FireBase will add this receiver automatically -->
-        <receiver android:name="com.google.android.gms.gcm.GcmReceiver" android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-
-                <category android:name="com.leanplum.leanplumexample" />
-            </intent-filter>
-        </receiver>
-        <!-- / GCM receiver -->
-
-        <receiver android:name="com.leanplum.LeanplumPushReceiver" android:exported="false">
-            <intent-filter>
-                <!-- Only add this action for Google Cloud Messaging -->
-                <action android:name="com.leanplum.LeanplumPushListenerService" />
-                <!-- Only add this action for FireBase Cloud Messaging -->
-                <action android:name="com.leanplum.LeanplumPushFirebaseMessagingService" />
-            </intent-filter>
-        </receiver>
-
-        <service android:name="com.leanplum.LeanplumPushListenerService" android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-            </intent-filter>
-        </service>
-
-        <service android:name="com.leanplum.LeanplumLocalPushListenerService" />
-
-        <service android:name="com.leanplum.LeanplumPushRegistrationService" />
-
-        <service android:name="com.leanplum.LeanplumPushInstanceIDService" android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.android.gms.iid.InstanceID" />
-            </intent-filter>
-        </service>
-
     </application>
-
 </manifest>
