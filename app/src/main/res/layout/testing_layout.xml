@@ -73,5 +73,9 @@
         <Button android:id="@+id/center_limitSession_2" android:layout_width="149dp"
             android:layout_height="wrap_content" android:enabled="true"
             android:text="Center_LIMITSESSION_2" android:textSize="12sp" />
+        <Button android:id="@+id/confirm_limitSession_2" android:layout_width="149dp"
+                android:layout_height="wrap_content" android:enabled="true"
+                android:text="Confirm_LIMITSESSION_2" android:textSize="12sp" />
+
     </LinearLayout>
 </LinearLayout>

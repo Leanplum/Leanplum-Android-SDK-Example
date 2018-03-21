@@ -187,6 +187,14 @@ public class TestingFragment extends Fragment {
         Leanplum.track("Center_limitSession_2");
       }
     });
+
+    final Button confirm_limitSession_2 = root.findViewById(R.id.confirm_limitSession_2);
+    confirm_limitSession_2.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Confirm_limitSession_2");
+      }
+    });
     return root;
   }
 }
