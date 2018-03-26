@@ -29,6 +29,8 @@ import com.leanplum.android.example.fragments.AppInboxFragment;
 import com.leanplum.android.example.fragments.InAppMessagesFragment;
 import com.leanplum.android.example.fragments.PushNotificationsFragment;
 import com.leanplum.android.example.fragments.TestingFragment;
+import com.leanplum.android.example.fragments.TestingInAppFragment;
+import com.leanplum.android.example.fragments.TestingPushFragment;
 
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
@@ -84,6 +86,12 @@ public class MainActivity extends AppCompatActivity
         break;
       case R.id.nav_testing:
         fragment = TestingFragment.newInstance();
+        break;
+      case R.id.nav_testing_push:
+        fragment = TestingPushFragment.newInstance();
+        break;
+      case R.id.nav_testing_in_app:
+        fragment = TestingInAppFragment.newInstance();
         break;
       default:
         fragment = PushNotificationsFragment.newInstance();

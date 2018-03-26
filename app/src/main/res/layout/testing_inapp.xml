@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:orientation="vertical">
+        <!-- IN APP TEMPLATES -->
+        <Button
+            android:id="@+id/alert"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="alert"
+            android:textSize="8sp"/>
+
+        <Button
+            android:id="@+id/center_popup"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="center_popup"
+            android:textSize="8sp"/>
+
+        <Button
+            android:id="@+id/interstitial"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="interstitial"
+            android:textSize="8sp"/>
+
+        <Button
+            android:id="@+id/push_pre_permission"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="push_pre_permission"
+            android:textSize="8sp"/>
+
+        <Button
+            android:id="@+id/web_interstitial"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="web_interstitial"
+            android:textSize="8sp"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:orientation="vertical">
+        <!-- ACTIONS -->
+        <Button
+            android:id="@+id/open_url"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="open_url"
+            android:textSize="8sp"/>
+
+        <Button
+            android:id="@+id/register_for_push"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="register_for_push"
+            android:textSize="8sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:orientation="vertical">
+        <!-- RICH IN-APP TEMPLATES -->
+        <Button
+            android:id="@+id/banner"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="banner"
+            android:textSize="8sp"/>
+
+        <Button
+            android:id="@+id/rich_interstitial"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="rich_interstitial"
+            android:textSize="8sp"/>
+
+        <Button
+            android:id="@+id/star_rating"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="star_rating"
+            android:textSize="8sp"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:orientation="vertical">
+
+        <!-- CHAINED IN-APP MESSAGES -->
+        <Button
+            android:id="@+id/chained_message"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="chained_message"
+            android:textSize="8sp"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:orientation="vertical">
+        <!-- WHEN LIMITS -->
+        <Button
+            android:id="@+id/limit_session"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="limit_session"
+            android:textSize="8sp"/>
+
+        <Button
+            android:id="@+id/limit_lifetime"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="limit_lifetime"
+            android:textSize="8sp"/>
+    </LinearLayout>
+</LinearLayout>
