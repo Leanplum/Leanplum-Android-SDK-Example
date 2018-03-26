@@ -180,11 +180,11 @@ public class TestingFragment extends Fragment {
       }
     });
 
-    final Button center_limitSession_2 = root.findViewById(R.id.center_limitSession_2);
+    final Button center_limitSession_2 = root.findViewById(R.id.center_limitLife_2);
     center_limitSession_2.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Leanplum.track("Center_limitSession_2");
+        Leanplum.track("Center_limitLife_2");
       }
     });
 
