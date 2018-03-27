@@ -26,6 +26,14 @@
             android:textSize="8sp"/>
 
         <Button
+            android:id="@+id/confirm"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="confirm"
+            android:textSize="8sp"/>
+
+        <Button
             android:id="@+id/interstitial"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
@@ -103,6 +111,7 @@
             android:enabled="true"
             android:text="star_rating"
             android:textSize="8sp"/>
+
     </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -113,12 +122,22 @@
 
         <!-- CHAINED IN-APP MESSAGES -->
         <Button
-            android:id="@+id/chained_message"
+            android:id="@+id/chain_to_existing"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:enabled="true"
-            android:text="chained_message"
+            android:text="chain_to_existing"
             android:textSize="8sp"/>
+
+
+        <Button
+            android:id="@+id/chain_to_new"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="chain_to_new"
+            android:textSize="8sp"/>
+
     </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

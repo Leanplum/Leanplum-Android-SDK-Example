@@ -1,10 +1,7 @@
 package com.leanplum.android.example.fragments;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,6 +47,14 @@ public class TestingInAppFragment extends Fragment {
       }
     });
 
+    final Button confirm = root.findViewById(R.id.confirm);
+    confirm.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("confirm");
+      }
+    });
+
     final Button interstitial = root.findViewById(R.id.interstitial);
     interstitial.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -75,6 +80,7 @@ public class TestingInAppFragment extends Fragment {
     });
 
     // ACTIONS
+
     final Button open_url = root.findViewById(R.id.open_url);
     open_url.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -92,6 +98,7 @@ public class TestingInAppFragment extends Fragment {
     });
 
     // RICH IN-APP TEMPLATES
+
     final Button banner = root.findViewById(R.id.banner);
     banner.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -117,11 +124,20 @@ public class TestingInAppFragment extends Fragment {
     });
 
     // CHAINED IN-APP MESSAGES
-    final Button chained_message = root.findViewById(R.id.chained_message);
-    chained_message.setOnClickListener(new View.OnClickListener() {
+
+    final Button chain_to_existing = root.findViewById(R.id.chain_to_existing);
+    chain_to_existing.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Leanplum.track("chained_message");
+        Leanplum.track("chain_to_existing");
+      }
+    });
+
+    final Button chain_to_new = root.findViewById(R.id.chain_to_new);
+    chain_to_new.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("chain_to_new");
       }
     });
 
