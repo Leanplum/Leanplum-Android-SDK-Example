@@ -63,14 +63,6 @@ public class TestingInAppFragment extends Fragment {
       }
     });
 
-    final Button push_pre_permission = root.findViewById(R.id.push_pre_permission);
-    push_pre_permission.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        Leanplum.track("push_pre_permission");
-      }
-    });
-
     final Button web_interstitial = root.findViewById(R.id.web_interstitial);
     web_interstitial.setOnClickListener(new View.OnClickListener() {
       @Override

@@ -42,14 +42,6 @@
             android:textSize="8sp"/>
 
         <Button
-            android:id="@+id/push_pre_permission"
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:enabled="true"
-            android:text="push_pre_permission"
-            android:textSize="8sp"/>
-
-        <Button
             android:id="@+id/web_interstitial"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
