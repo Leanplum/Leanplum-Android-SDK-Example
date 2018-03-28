@@ -29,7 +29,7 @@ android {
     buildToolsVersion "${BUILD_TOOLS_VERSION}"
     defaultConfig {
         applicationId "com.leanplum.android.example"
-        minSdkVersion 19
+        minSdkVersion 15
         targetSdkVersion COMPILE_SDK_VERSION
         versionCode 1
         versionName "1.0"
