@@ -64,13 +64,6 @@
             android:text="open_url"
             android:textSize="8sp"/>
 
-        <Button
-            android:id="@+id/register_for_push"
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:enabled="true"
-            android:text="register_for_push"
-            android:textSize="8sp"/>
     </LinearLayout>
 
 

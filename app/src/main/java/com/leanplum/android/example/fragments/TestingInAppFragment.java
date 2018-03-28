@@ -81,14 +81,6 @@ public class TestingInAppFragment extends Fragment {
       }
     });
 
-    final Button register_for_push = root.findViewById(R.id.register_for_push);
-    register_for_push.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        Leanplum.track("register_for_push");
-      }
-    });
-
     // RICH IN-APP TEMPLATES
 
     final Button banner = root.findViewById(R.id.banner);
