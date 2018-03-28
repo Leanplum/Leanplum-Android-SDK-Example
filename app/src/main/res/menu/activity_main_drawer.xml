@@ -13,5 +13,9 @@
             android:title="A/B Test" />
         <item android:id="@+id/nav_testing" android:icon="@drawable/ic_leanplum"
             android:title="Testing" />
+        <item android:id="@+id/nav_testing_push" android:icon="@drawable/ic_leanplum"
+              android:title="Testing Push" />
+        <item android:id="@+id/nav_testing_in_app" android:icon="@drawable/ic_leanplum"
+              android:title="Testing In App" />
     </group>
 </menu>
