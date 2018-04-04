@@ -116,6 +116,14 @@
             android:textSize="8sp"/>
 
         <Button
+            android:id="@+id/send_push_open_url"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="SEND_PUSH_OPEN_URL"
+            android:textSize="8sp"/>
+
+        <Button
             android:id="@+id/cancel_push_triggered"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
