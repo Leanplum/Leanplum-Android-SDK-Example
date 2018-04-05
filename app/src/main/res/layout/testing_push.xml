@@ -99,6 +99,14 @@
             android:text="PUSH_Mute_INTERSTITIAL"
             android:textSize="8sp"/>
 
+        <Button
+            android:id="@+id/send_push_mute_open_url"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="SEND_PUSH_MUTE_OPEN_URL"
+            android:textSize="8sp"/>
+
     </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
