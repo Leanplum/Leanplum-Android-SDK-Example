@@ -35,7 +35,7 @@ public class PushNotificationsFragment extends BaseFragment {
       Bundle savedInstanceState) {
     View root = inflater.inflate(R.layout.show_example_layout, container, false);
 
-    Button example = (Button) root.findViewById(R.id.track_event);
+    Button example = root.findViewById(R.id.track_event);
     example.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {

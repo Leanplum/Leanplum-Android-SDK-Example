@@ -149,5 +149,21 @@ public class TestingPushFragment extends Fragment {
         Leanplum.track("Cancel_push_triggered");
       }
     });
+
+    final Button push_image = root.findViewById(R.id.send_push_image);
+    push_image.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Send_push_image");
+      }
+    });
+
+    final Button push_large_image = root.findViewById(R.id.send_push_large_image);
+    push_large_image.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Send_push_large_image");
+      }
+    });
   }
 }

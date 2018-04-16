@@ -6,6 +6,8 @@ def SUPPORT_LIBRARY_VERSION = '27.1.0'
 def LP_VERSION = System.getenv('LP_VERSION') ?: '4.0.0'
 def GCM_SENDER_ID = System.getenv('GCM_SENDER_ID') ?: ''
 
+println "GCM Sender ID: " + GCM_SENDER_ID
+
 configurations.all {
     resolutionStrategy {
         // Force dependency resolution for Leanplum via UI Editor to desired version.
