@@ -125,6 +125,23 @@ public class TestingPushFragment extends Fragment {
       }
     });
 
+    final Button push_open_url = root.findViewById(R.id.send_push_open_url);
+    push_open_url.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Send_push_open_url");
+      }
+    });
+
+    final Button push_mute_open_url = root.findViewById(R.id.send_push_mute_open_url);
+    push_mute_open_url.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Leanplum.track("Send_push_mute_open_url");
+      }
+    });
+
+
     final Button push_triggered_cancel = root.findViewById(R.id.cancel_push_triggered);
     push_triggered_cancel.setOnClickListener(new View.OnClickListener() {
       @Override
